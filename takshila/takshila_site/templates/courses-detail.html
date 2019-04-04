@@ -1,0 +1,538 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Takshila</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="icon" href="{% static 'images/logo.png' }" type="image/gif" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/jquery.fittext.js' %}"></script>
+    <script src="{% static 'assets/jquery.lettering.js' %}"></script>
+    <script src="{% static 'assets/jquery.textillate.js' %}"></script>
+  </head>
+
+    <body style="background-color: white;">
+      <nav class="navbar navbar-custom navbar-fixed-top slidd" style="background-color: #3fc98a;">
+        <div class="" style="background-color: lavender; padding-right: 0px;">
+          <div style="height: 80px; width: 40px;"  class="col-sm-1"> 
+            <button type="submit" onclick="btfocus()" style="background-color: transparent; border: none; padding: 0px;">
+            <span class="glyphicon glyphicon-search " style="font-size: 25px; padding: 0px; width: 30px; margin-top: 25px;"></span></button>
+          </div>
+          <div style="height: 80px;" class="col-sm-3" align="left">
+            <form onsubmit="filter();return false;">
+
+              <input type="text" id="search_product" style="width: 340px; margin-top: 25px; font-size: 20px; background-color: transparent; border: none;" placeholder="Search Courses" name="search">
+              <button type="submit" style="display: none;"></button>
+            </form>
+          </div>
+          <div align="right" class="col-sm-7" style="height: 80px; width: 943px">
+            <button onclick="myFunction()" style="background-color: transparent; border: none;"><span class="glyphicon glyphicon-resize-full" style="font-size: 25px; margin-right: 20px; margin-top: 25px;"></span></button>
+          </div>
+          <div align="center" class="col-sm-1" style="background-color: #37a874; border: 1px solid block; margin-left: 0px; width: 97px; height:80px; padding: 0px;">
+            <a href="/courses" style="color: #333333;"><span class="glyphicon glyphicon-remove" style="margin-top: 25px; font-size: 25px;"></span></a>
+          </div>
+
+        </div>
+      </nav>
+
+<div id="demo0" style="">
+ <div class="column" style="width: 400px;  margin-top: 60px; background-color: white; border-right: 1px solid #eeeeee;
+">
+   <div class="content">
+
+    <div style="height: 130px; background-color: #f9fafa;">
+      <br>
+      <p style="font-size: 16px; margin-left: 20px; color:#2579fb;">Courses&nbsp&nbsp>&nbsp&nbspGoogle Ad Words&nbsp&nbsp></p>
+      <br>
+      <p style="font-size: 26px; margin-left: 20px; color:#808080;">Google Ad Words</p>
+    </div>
+
+<ul class="nav nav-stacked container" style="width: 413px; ">
+  <div class="containe" style="margin-bottom: 0px">
+  <button type="button" class="btn btn-list" data-toggle="collapse" data-target="#demo"><a href="#" style="margin-bottom: 20px; font-size: 24px; color: black;">
+    <p style="display: inline-block; font-size: 30px; margin-right: 20px; color:#337ab7;">-</p>
+    Introduction
+  <p align="right"  style="display: inline-block; font-size: 22px; margin-left: 130px; color:#337ab7;">0/3</p>
+  </a></button>
+
+  <div id="demo" class="collapse" style="margin-bottom: 20px;">
+    <div class = "sublist" style=" margin-left: 20px;">
+
+  <button style="background: transparent; border: none; width: 400px;" data-toggle="collapse" data-target="#demo-content">
+  <div align="left">
+    <li style="    border-bottom: 1px solid #eeeeee;">
+      
+      <span class="glyphicon glyphicon-file"></span>
+      <p style="display: inline-block; color: black; font-size: 16px;">1.1&nbsp&nbsp&nbsp&nbspMeet Your Instructors</p> 
+      <p align="left" style=" margin-left: 60px; color: #808080;">30 min</p>
+  </li>
+  </div>
+  </button>
+
+  <button style="background: transparent; border: none; width: 400px;" data-toggle="collapse" data-target="#demo-content2">
+  <div align="left">
+    <li style="    border-bottom: 1px solid #eeeeee;">
+      <span class="glyphicon glyphicon-question-sign"></span>
+      <p style="display: inline-block; color: black; font-size: 16px;">1.2&nbsp&nbsp&nbsp&nbspOverview</p> 
+      <p style=" margin-left: 60px; color: #808080;">30 min</p>
+  </li>
+  </div>
+  </button>
+
+  <button style="background: transparent; border: none; width: 400px;" data-toggle="collapse" data-target="#demo-content3">
+  <div align="left">
+    <li align="left" style="border-bottom: 1px solid #eeeeee;">
+      <span class="glyphicon glyphicon-facetime-video" ></span>
+      <p style="display: inline-block; color: black; font-size: 16px;">1.3&nbsp&nbsp&nbsp&nbspLecture</p>
+
+      <p style=" margin-left: 60px; color: #808080;">30 min</p>
+  </li>
+</div>
+  </button>
+
+
+  </div>
+</div>
+</div>
+
+
+
+
+ <!--  <div class="containe" style="margin-bottom: 0px">
+  <button type="button" class="btn btn-list" data-toggle="collapse" data-target="#demo2"><a href="#" style="margin-bottom: 20px; font-size: 24px; color: black;">
+    <p style="display: inline-block; font-size: 30px; margin-right: 20px; color:#337ab7;">-</p>
+    Digital Mktng
+  <p align="right"  style="display: inline-block; font-size: 22px; margin-left: 130px; color:#337ab7;">0/9</p>
+  </a></button>
+
+  <div id="demo2" class="collapse" style="margin-bottom: 20px;">
+    <div class = "sublist" style=" margin-left: 20px;">
+
+    <li style="    border-bottom: 1px solid #eeeeee;">
+      <span class="glyphicon glyphicon-file"></span>
+      <p style="display: inline-block; color: black; font-size: 16px;">2.1&nbspMeet Your Instructors</p> 
+      <p style=" margin-left: 60px; color: #808080;">30 min</p>
+  </li>
+
+    <li style="    border-bottom: 1px solid #eeeeee;">
+      <span class="glyphicon glyphicon-question-sign"></span>
+      <p style="display: inline-block; color: black; font-size: 16px;">2.2&nbspOverview</p> 
+      <p style=" margin-left: 60px; color: #808080;">30 min</p>
+  </li>
+
+  </div>
+</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+   </div>
+ </div>
+</div>
+
+
+
+ <div class="column" id="col2" style="width: 1040px;">
+   <div class="content" id= "col3" align="right" style=" margin-left: 130px; margin-right: 130px; ">
+    
+
+    <div id="demo-content" class="collapse" >
+    <p style="font-size: 28px; font-weight: bold;" align="center">Basics of excel</p>
+    <p align="left">You know how important Excel is in life. It’s one of the most in-demand skill and almost every
+recruiter prefers someone with knowledge of Excel. So let’s start by understanding the basics of
+Excel. Gain knowledge about excel sheets and files, how to input data in the sheet and basic
+formatting.
+
+https://www.youtube.com/watch?v=pVHUdQKdgi0
+https://www.youtube.com/watch?v=-0Ic6pTak7A
+https://www.excelsuperstar.org/what-is-ms-excel-in-hindi/
+https://www.tutorialpandit.com/ms-excel-kya-hai/
+https://www.computerhope.com/jargon/e/excel.htm
+https://www.lifewire.com/what-is-microsoft-excel-3573533
+
+Now that you have understood the basics, let’s move forward with Excel. It&#39;s time for us to
+understand how to use the filter, sort,freeze/unfreeze panes and format painter tools.
+https://www.youtube.com/watch?v=s--GVkHilDY
+https://www.youtube.com/watch?v=s--GVkHilDY
+https://www.youtube.com/watch?v=Z2hwYUYzXRk
+https://www.youtube.com/watch?v=86hy0M-IPhQ
+https://www.youtube.com/watch?v=eFN9e_iR8ok
+https://www.youtube.com/watch?v=KRMCzPbd8ZQ
+https://www.learnexcelnow.com/sorting-and-filtering-data-with-excel/
+https://www.excel-easy.com/data-analysis/filter.html
+https://www.makeuseof.com/tag/freeze-unfreeze-columns-rows-excel/
+https://www.excel-easy.com/examples/freeze-panes.html
+https://support.office.com/en-us/article/unfreeze-locked-panes-4230b27b-a5a0-41ae-9a58-
+7d7fb9e05a8e
+https://www.excel-easy.com/examples/format-painter.html
+https://support.office.com/en-us/article/copy-cell-formatting-with-the-format-painter-b9fe82ea-
+c0a0-41de-837b-d2f15dd41ea9
+
+https://www.youtube.com/watch?v=KnWjJlyHxj0
+https://www.youtube.com/watch?v=snYtyGw9-qw
+https://www.youtube.com/watch?v=hAyUrnWi25s
+https://www.youtube.com/watch?v=v_Z6rHgfYWs
+https://www.youtube.com/watch?v=QV0KhHr6UbM
+https://www.youtube.com/watch?v=lbZ2dsRbuiA&amp;vl=hi
+
+</p>
+   </div>
+
+    <div id="demo-content2" class="collapse">
+
+    <p style="font-size: 28px; font-weight: bold;" align="center">Ethereum Module Quiz</p>
+    <div align="left">
+    <span class="glyphicon glyphicon-info-sign" style="display: inline-block;"> 3 Questions</span>
+   </div>
+   <br>
+  <div align="left">
+    <span class="glyphicon glyphicon-time" style="display: inline-block;"> 00:02:30 mins</span>
+   </div>
+   <br>
+   <button class="btn btn-primary" id = "start" onclick="quizstart()" style="float: left;">Start</button>
+   <br><br>
+
+
+    <div id="quiz" class="quizContainer" align="left">
+        <div id="quiz1" align="left">
+      <span> </span><br/><span id="timer"></span>
+    </div>
+    
+        <div id = "question" class="question"></div>
+        <ul id="choice" class="choiceList"></ul>
+        <div id="message" class="quizMessage"></div>
+        <div class="result"></div>
+
+    <button id= "pre" class="preButton">Previous Question</button>
+        <button id= "next" class="nextButton">Next Question</button>
+    </div>
+
+
+<script type="text/javascript">
+        document.getElementById("pre").style.display ="none";
+        document.getElementById("next").style.display ="none";
+
+var questions = [{
+    question: "1. How to insert hyperlink in excel?",
+    choices: ["Select the cell, right click and select hyperlink", "Select the cell, Cntrl H", "Select cell, Cntrl K", "Select cell, in the menu under insert find hyperlink"],
+    correctAnswer: 1
+},
+{
+    question: "2. How to save excel/word as PDF?",
+    choices: ["Click on file tab,save as and select file type as PDF", "Cntrl Shift S, select file type as PDF", "Cntrl Shift P", "Cannot be saved as PDF"],
+    correctAnswer: 2
+},
+{
+    question: "3. How can you header rows/columns stick even on scrolling?",
+    choices: ["It can’t be done", "Use Freeze pane option in View tab", "Use Hide option in View Tab", "Select the row/column, right click and select stick row/column"],
+    correctAnswer: 2
+}
+ ];
+
+        // $('#quiz1').html.style.display="none";
+
+var currentQuestion = 0;
+var correctAnswers = 0;
+var quizOver = false;
+var iSelectedAnswer = [];
+var time = 150;
+var c=time;
+var t = c + 5;
+
+function quizstart()
+{
+            document.getElementById("start").style.display ="none";
+
+          document.getElementById("pre").style.display ="inline";
+        document.getElementById("next").style.display ="inline";
+  
+$(document).ready(function start() 
+{
+    // Display the first question
+    displayCurrentQuestion();
+    $(this).find(".preButton").attr('disabled', 'disabled');
+    
+    timedCount();
+    
+    $(this).find(".preButton").on("click", function () 
+    {       
+        
+        if (!quizOver) 
+        {
+            if(currentQuestion == 0) { return false; }
+    
+            if(currentQuestion == 1) {
+              $(".preButton").attr('disabled', 'disabled');
+            }
+            
+                currentQuestion--; // Since we have already displayed the first question on DOM ready
+                if (currentQuestion < questions.length) 
+                {
+                    displayCurrentQuestion();
+                    
+                }                   
+        }
+    });
+
+    
+    // On clicking next, display the next question
+    $(this).find(".nextButton").on("click", function () 
+    {
+        if (!quizOver) 
+        {
+            
+            var val = $("input[type='radio']:checked").val();
+
+            if (val == undefined) 
+            {
+                $(document).find(".quizMessage").text("Please select an answer");
+                $(document).find(".quizMessage").show();
+            } 
+            else 
+            {
+                // TODO: Remove any message -> not sure if this is efficient to call this each time....
+                $(document).find(".quizMessage").hide();
+                if (val == questions[currentQuestion].correctAnswer) 
+                {
+                    correctAnswers++;
+                }
+                iSelectedAnswer[currentQuestion] = val;
+                
+                currentQuestion++; // Since we have already displayed the first question on DOM ready
+                if(currentQuestion >= 1) {
+                      $('.preButton').prop("disabled", false);
+                }
+                if (currentQuestion < questions.length) 
+                {
+                    displayCurrentQuestion();
+                    
+                } 
+                else 
+                {
+                    displayScore();
+                    // $('#timer').html("You scored: " + correctAnswers + " out of: " + questions.length);
+                    c=t;
+                    $(document).find(".preButton").hide();
+                    $(document).find(".nextButton").hide();
+                    quizOver = true;
+                    return false;
+                    
+                }
+            }
+                    
+        }   
+
+    });
+});
+}
+
+
+function timedCount()
+    {
+        if(c == t) 
+        { 
+            return false; 
+        }
+        
+        var hours = parseInt( c / 3600 ) % 24;
+        var minutes = parseInt( c / 60 ) % 60;
+        var seconds = c % 60;
+        var result = "Time Remaining : " + (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds);            
+        $('#timer').html(result);
+        
+        if(c == 0 )
+        {
+                    displayScore();
+                    $('#timer').html("You scored: " + correctAnswers + " out of: " + questions.length);
+                    c=t;
+                    quizOver = true;
+                    return false;
+                    
+        }
+        
+    
+        c = c - 1;
+        t = setTimeout(function()
+        {
+            timedCount()
+        },1000);
+    }
+    
+    
+// This displays the current question AND the choices
+function displayCurrentQuestion() 
+{
+
+    if(c == t) { c = time; timedCount(); }
+    //console.log("In display current Question");
+    var question = questions[currentQuestion].question;
+    var questionClass = $(document).find(".quizContainer > .question");
+    var choiceList = $(document).find(".quizContainer > .choiceList");
+    var numChoices = questions[currentQuestion].choices.length;
+    // Set the questionClass text to the current question
+    $(questionClass).text(question);
+    // Remove all current <li> elements (if any)
+    $(choiceList).find("li").remove();
+    var choice;
+    
+    
+    for (i = 0; i < numChoices; i++) 
+    {
+        choice = questions[currentQuestion].choices[i];
+        
+        if(iSelectedAnswer[currentQuestion] == i) {
+            $('<li><input type="radio" class="radio-inline" checked="checked"  value=' + i + ' name="dynradio" />' +  ' ' + choice  + '</li>').appendTo(choiceList);
+        } else {
+            $('<li><input type="radio" class="radio-inline" value=' + i + ' name="dynradio" />' +  ' ' + choice  + '</li>').appendTo(choiceList);
+        }
+    }
+}
+
+
+
+function displayScore()
+{
+      document.getElementById("pre").style.display="none";
+
+    document.getElementById("next").style.display="none";
+
+    document.getElementById("quiz1").style.display="none";
+    document.getElementById("question").style.display="none";
+    document.getElementById("choice").style.display="none";
+    document.getElementById("message").style.display="none";
+    $(document).find(".quizContainer > .result").text("You scored: " + (correctAnswers/questions.length)*100 + "%");
+    $(document).find(".quizContainer > .result").show();
+}
+
+</script>
+
+
+
+   </div>
+
+  <div id="demo-content3" class="collapse">
+    <p style="font-size: 28px; font-weight: bold;" align="center">Reading Assignment</p>
+    <p align="left"><iframe width="660" height="400" src="https://www.youtube-nocookie.com/embed/v4pi1LxuDHc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+   </div>
+
+
+
+   <hr>
+   <p align="left">PREV&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNEXT</p>
+
+   <p align="left" style="font-weight: bold;">Overview&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLecture</p>
+
+
+   <div id="comment" align="left" style="margin-top: 50px;">
+    <p style="font-size: 26px;">Leave A Reply</p>
+    <p style="font-size: 18px;">Logged in as Kushagra Singh. Log out?</p>
+    <form>
+    <textarea id ="form_message" class="form-control" placeholder="Comment *" style="height:220px; width: 780px;"></textarea>
+            <input style="margin-top: 20px;" type="submit" class="btn btn-primary" value="Post Comment" onclick="datapost(); return false;">
+
+    </form>
+   </div>
+
+
+
+
+
+ </div>
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+<style type="text/css">
+
+.btn-list {
+  margin-bottom: 20px;
+  width: 413px;
+    background-color: transparent;
+    border-color: #46b8da;
+    color: black;
+    border: none;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+
+div.container {
+  width: 100%;
+  border: 2px solid black;
+}
+
+
+.column {
+  margin-top: 80px;
+  height: 100vh;
+  float: left;
+  overflow: scroll;
+/*overflow-x: hidden;*/
+}
+
+/* Create artificial contecnt that extend past the viewport */
+.content {
+  height: 10000px;
+/*  margin: 20px auto;
+  line-height: 1.5em;*/
+}
+
+
+
+
+
+</style>
+
+<script type="text/javascript">
+  document.body.style.overflow = 'hidden';
+  function btfocus()
+  {
+  document.getElementById("search_product").focus();
+}
+
+
+
+function myFunction() {
+  var x = document.getElementById("demo0");
+  var y = document.getElementById("col2");
+  var z = document.getElementById("col3");
+
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    col2.style.width = "1040px";
+    col3.style= "margin-left: 130px; margin-right: 130px; ";
+  } else {
+    x.style.display = "none";
+  col2.style.width = "1440px";
+    col3.style= "margin-left: 300px; margin-right: 300px; ";
+  }
+}
+
+
+</script>

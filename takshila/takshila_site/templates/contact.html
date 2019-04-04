@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Takshila</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/courses.css' %}">
+
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/gif" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    <script src="{% static 'assets/jquery.fittext.js' %}"></script>
+    <script src="{% static 'assets/jquery.lettering.js' %}"></script>
+    <script src="{% static 'assets/jquery.textillate.js' %}"></script>
+
+
+
+
+  </head>
+
+  <body>
+
+
+      {% include 'header.html' %} <!--Add this-->
+
+
+
+
+
+<div class="hero-image">
+
+
+
+  <div class="hero-text">
+    <h1 style="font-size:60px; position: absolute; bottom:100px; right: -100px;">Contact</h1>
+  </div>
+
+
+<div class="bottom-text">
+    <p style="font-size:15px; position: absolute;  bottom: 370px;">Home&nbsp/&nbspContact</p>
+</div>
+
+<div class="line" style="bottom: 420px; color: #808080;"></div>
+
+</div>
+
+  <div class="contact">
+    <div class="col-sm-5" style="margin-left: 60px; margin-top: 60px;">
+      <p style="font-size: 24px; font-weight: bold;"> Contact Info<p>
+        <p style="font-size: 16px; color: #808080">Welcome to our Website. We are glad to have you around.</p>
+        <hr style="margin-bottom: 40px; margin-top: 40px;">
+        <img src="{% static 'images/mail.png' %}" style="height: 45px; width: 45px; display: inline-block;">
+        <p style="display: inline-block; font-size: 16px; font-weight: bold;">Email</p>
+        <p style="margin-left: 50px; font-size: 16px; color: grey;">ishangrowthspree@gmail.com</p>
+        <hr style="margin-bottom: 48px">
+        <div class="col-sm-6" style="margin-left: 38px;">
+            <img src="{% static 'images/fb_logo.png' %}" style="width:35px; height:35px;   border-radius: 50%; margin-right: 10px;">
+            <img src="{% static 'images/in_logo.png' %}" style="width:35px; height:35px;   border-radius: 50%; margin-right: 10px;">
+            <img src="{% static 'images/yt_logo.png' %}" style="width:35px; height:35px;   border-radius: 50%;">
+        </div>
+    </div>
+
+    <div class="col-sm-5" style="margin-left: 60px; margin-top: 60px;">
+      <p style="font-size: 24px; font-weight: bold;">Send A Message<p>
+        <p style="font-size: 16px; color: #808080">Your email address will not be published. Required fields are marked.</p>
+        <hr style="margin-bottom: 40px; margin-top: 40px;">      
+        <form>
+          <div class="input-group mb-6">
+            <input id ="form_name" type="text" class="form-control" placeholder="Name *" style="width: 280px; display: inline-block; margin-right: 15px;">
+            <input id ="form_email" type="email" class="form-control" placeholder="Email *" style="width: 280px; display: inline-block; margin-bottom: 20px;">
+            <input id ="form_subject" type="text" class="form-control" placeholder="Subject *" style="width: 575px; display: inline-block; margin-bottom: 20px;">
+            <textarea id ="form_message" class="form-control" placeholder="Message *" style="height:180px; width: 575px;"></textarea>
+            <input style="margin-top: 20px;" type="submit" class="btn btn-primary" value="Submit Button" onclick="datapost(); return false;">
+          </div>
+        </form>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+$(function(){
+});
+</script>
+<script type="text/javascript">
+  
+function datapost()
+{
+   
+    var data = {
+                "name":document.getElementById("form_name").value,
+                "email":document.getElementById("form_email").value,
+                "subject":document.getElementById("form_subject").value,
+                "message":document.getElementById("form_message").value
+              }
+//post data
+}
+
+</script>
+
+
+
+<div id="footer" style="margin-top: 700px;">
+        {% include 'footer.html' %} <!--Add this-->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

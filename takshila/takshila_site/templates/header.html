@@ -1,0 +1,300 @@
+{% load static %}
+{% block main %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Takshila</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ -->
+    <link rel="icon" href="{% static 'static/images/logo.png' %}" type="image/gif" >
+
+
+  </head>
+  <body>
+    <div class="header-section">
+      
+      
+      <nav class="navbar navbar-custom navbar-fixed-top slidd">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><img id = "navbar-logo" src="{% static 'images/logo_white.svg' %}"></li>
+            <li><a id = "nav-text1" href="http://127.0.0.1:8000/">Home</a></li>
+            <li class="nav-item dropdown" id="nav-text2">
+                <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/courses" id="navbarDropdown">
+                  Courses
+                </a>
+                <div style="height: 350px; width:702px;" class="dropdown-menu mt-0" aria-labelledby="navbarDropdown">
+
+                <div style="margin-left: 0px; margin-top: 25px;" class="col-sm-4" align="center">
+                  <a class="dropdown-item" href=""style="font-size: 20px; color: #808080;">Featured Courses</a>
+                  <br><br>
+                  <a class="dropdown-item" href="instructors.html" style="font-size: 20px; margin-right: 65px; color: #808080;">Instructors</a>
+                </div>
+
+                <!-- <div style="margin-top: 30px;" class="col-sm-4" align="center">
+                    <div class="card" style="border: 1px solid #808080;">
+                        <img src="{% static 'images/home.jpg' %}" style="width:100%">
+                        <p style="font-size: 20px;">Digital Marketing</p>
+                        <p class="instructor">Ishan Manchanda</p>
+                        <p class="card-bottom-text">
+                            <p style="display: inline"> Free &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                <span class="glyphicon glyphicon-user" style="display: inline">
+                                </span>
+                            2000
+                        </p>
+                        </p>
+                    </div>
+                </div> -->
+
+
+                <a href="/courses_detail/">
+                <div style="margin-top: 30px;" class="col-sm-4" align="center">
+                    <div class="card" style="border: 1px solid #808080;">
+                        <img src="{% static 'images/home.jpg' %}" style="width:100%">
+                        <p style="font-size: 20px;">Google Ad Words</p>
+                        <p class="instructor">Nilesh Gupta</p>
+                        <p class="card-bottom-text">
+                            <p style="display: inline"> Free &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                <span class="glyphicon glyphicon-user" style="display: inline">
+                                </span>
+                            5000
+                        </p>
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+
+
+
+                 <!--  <a class="dropdown-item" href="contact.html">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="contact.html">Something else here</a>
+                </div> -->
+            </li>
+            <li><a id = "nav-text3" href="http://127.0.0.1:8000/team">Team</a></li>
+            <li><a id = "nav-text4" href="https://medium.com/@ishanmanchanda">Blog</a></li>
+            <li><a id = "nav-text5" href="http://127.0.0.1:8000/contact">Contact</a></li>
+     
+
+
+
+
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id = "nav-text6" href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> 
+
+            {% if user.is_authenticated %}
+            Welcome {{user.username}}
+            {% else %}
+            Login
+            {% endif %}
+
+
+            </a></li>
+            <li><a id = "nav-text7" href="#" onclick="openSearch()"><span class="glyphicon glyphicon-search"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Login with your site account </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+                            <li><a href="#Registration" data-toggle="tab">Registration</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Login">
+                                <form role="form" class="form-horizontal" action="/login_web/" method="post">
+                                      {% csrf_token %}
+
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="username" class="form-control" id="email1" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1"  class="col-sm-2 control-label">
+                                        Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            Submit</button>
+                                        <a href="javascript:;">Forgot your password?</a>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="Registration">
+                                <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Name</label>
+                                    <div class="col-sm-10">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <select class="form-control">
+                                                    <option>Mr.</option>
+                                                    <option>Ms.</option>
+                                                    <option>Mrs.</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile" class="col-sm-2 control-label">
+                                        Mobile</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="mobile" placeholder="Mobile" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-sm-2 control-label">
+                                        Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            Save & Continue</button>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            Cancel</button>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="OR" class="hidden-xs">
+                            OR</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row text-center sign-with">
+                            <div class="col-md-12">
+                                <h3>
+                                    Sign in with</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="btn-group btn-group-justified">
+                                    <a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger">
+                                        Google</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <form action="">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
+
+<script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+
+    <script type="text/javascript">
+    $(function () {
+    $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    if ($(this).scrollTop() < 10)
+    {
+    document.getElementById("navbar-logo").src="../static/images/logo_white.svg";
+    document.getElementById("nav-text1").style.color="white";
+    document.getElementById("navbarDropdown").style.color="white";
+    document.getElementById("nav-text3").style.color="white";
+    document.getElementById("nav-text4").style.color="white";
+    document.getElementById("nav-text5").style.color="white";
+    document.getElementById("nav-text6").style.color="white";
+    document.getElementById("nav-text7").style.color="white";
+    }
+    else if ($(this).scrollTop() >= 10 && $(this).scrollTop() < 200)
+    {
+    document.getElementById("navbar-logo").src="../static/images/logo_black.svg";
+    document.getElementById("nav-text1").style.color="black";
+    document.getElementById("navbarDropdown").style.color="black";
+    document.getElementById("nav-text3").style.color="black";
+    document.getElementById("nav-text4").style.color="black";
+    document.getElementById("nav-text5").style.color="black";
+    document.getElementById("nav-text6").style.color="black";
+    document.getElementById("nav-text7").style.color="black";
+    }
+    $nav.toggleClass('scrolled', $(this).scrollTop() > 10 && $(this).scrollTop() < 200);
+    $nav.toggleClass('scrolled-disappear', $(this).scrollTop() >= 200);
+    });
+    });
+    </script>
+  </body>
+</html>
